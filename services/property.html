@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Services | True North Property Services | Stark &amp; Summit County, OH</title>
+  <meta name="description" content="True North Property Services offers seasonal cleanup, yard maintenance, grading, and general property work in Stark and Summit County, Ohio. Get a free quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="../index.html#services">Services ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="landscaping.html">Landscaping Services</a>
+            <a href="property.html">Property Services</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="../about.html">About ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../about.html">About Us</a>
+            <a href="../locations.html">Locations</a>
+          </div>
+        </div>
+        <a href="../index.html#testimonials">Reviews</a>
+        <a href="#quote" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="mobile-services-label">Services</span>
+    <a href="landscaping.html">Landscaping Services</a>
+    <a href="property.html">Property Services</a>
+    <a href="../about.html">About Us</a>
+    <a href="../locations.html">Locations</a>
+    <a href="#quote" class="btn btn-primary">Get a Quote</a>
+  </div>
+</nav>
+
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-animate > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-animate > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-animate > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-animate > *:nth-child(4) { animation-delay: 0.55s; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-animate">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <span>Property Services</span></div>
+      <h1>Property Services</h1>
+      <p>Beyond the beds we handle the work that keeps your whole property looking clean and cared for.</p>
+      <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .property-card {
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 1.75rem;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .property-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-dark);
+  }
+  .property-card p {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    margin: 0;
+  }
+  @media (max-width: 600px) {
+    .property-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="section">
+  <div class="container">
+    <div class="property-grid">
+      <div class="property-card">
+        <h3>Seasonal Cleanup</h3>
+        <p>Spring and fall cleanups debris cleared, beds tidied, and your property ready for the season.</p>
+      </div>
+      <div class="property-card">
+        <h3>Yard Cleanup</h3>
+        <p>One-time or recurring cleanup of overgrown, neglected, or post-storm yards.</p>
+      </div>
+      <div class="property-card">
+        <h3>Grading &amp; Leveling</h3>
+        <p>Low spots filled, drainage improved, and uneven areas regraded so water flows away from your home.</p>
+      </div>
+      <div class="property-card">
+        <h3>General Property Maintenance</h3>
+        <p>Ongoing upkeep to keep your property looking sharp throughout the season no contract required.</p>
+      </div>
+    </div>
+
+    <div style="background:var(--green-pale);border-radius:12px;padding:2rem 2.5rem;margin-top:3rem;text-align:center;">
+      <h3 style="color:var(--green-dark);margin-bottom:0.5rem;">Not sure what you need?</h3>
+      <p style="max-width:480px;margin:0 auto 1.25rem;">Call or text us we're happy to talk through your property and figure out the best approach together.</p>
+      <a href="tel:3302847590" class="btn btn-green btn-lg">(330) 284-7590</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section" id="quote">
+  <div class="container">
+    <div class="quote-section-inner">
+      <div class="quote-info">
+        <h2>Get a Free Quote</h2>
+        <p>We'll come out, take a look, and give you a clear written price no pressure, no obligation.</p>
+        <div class="quote-bullets">
+        </div>
+        <div style="margin-top:2rem;">
+          <p style="font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;">Prefer to call or text?</p>
+          <a href="tel:3302847590" class="btn btn-green btn-lg">(330) 284-7590</a>
+        </div>
+      </div>
+      <div class="quote-form-card">
+        <form class="quote-form" action="https://formspree.io/f/mqegokzl" method="POST">
+          <input type="hidden" name="page" value="Property Services Page" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ps-name">Name *</label>
+              <input type="text" id="ps-name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="ps-phone">Phone *</label>
+              <input type="tel" id="ps-phone" name="phone" required placeholder="(330) 555-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ps-city">Your Town *</label>
+            <input type="text" id="ps-city" name="city" required placeholder="e.g. North Canton" />
+          </div>
+          <div class="form-group">
+            <label for="ps-service">Service Needed *</label>
+            <select id="ps-service" name="service" required>
+              <option value="">  Select a service  </option>
+              <option>Seasonal Cleanup</option>
+              <option>Yard Cleanup</option>
+              <option>Grading &amp; Leveling</option>
+              <option>General Property Maintenance</option>
+              <option>Not Sure Let's Talk</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ps-message">Tell Us What You Need</label>
+            <textarea id="ps-message" name="message" placeholder="Describe your property and what you're looking to get done…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Request Free Quote →</button>
+          <p class="form-disclaimer">We'll only contact you about your quote. No spam.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a>
+        <p>Residential landscaping serving Stark and Summit County, Ohio.</p>
+        <p style="margin-top:1rem;"><strong style="color:#fff;">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.85)">(330) 284-7590</a></strong></p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="landscaping.html">Landscaping Services</a></li>
+          <li><a href="property.html">Property Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="../locations/north-canton.html">North Canton</a></li>
+          <li><a href="../locations/jackson-township.html">Jackson Township</a></li>
+          <li><a href="../locations/green.html">Green</a></li>
+          <li><a href="../locations/cuyahoga-falls.html">Cuyahoga Falls</a></li>
+          <li><a href="../locations/stow.html">Stow</a></li>
+          <li><a href="../locations/canton.html">Canton</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="footer-contact-item">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.7)">(330) 284-7590</a></div>
+        <div class="footer-contact-item">📧 <a href="mailto:Truenorthps@outlook.com" style="color:rgba(255,255,255,0.7)">Truenorthps@outlook.com</a></div>
+        <div class="footer-contact-item">📍 Stark &amp; Summit County, Ohio</div>
+        <a href="#quote" class="btn btn-primary" style="margin-top:1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">&copy; 2026 True North Property Services. All rights reserved.</div></div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

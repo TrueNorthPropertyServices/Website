@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landscape Design | True North Property Services | Free Estimate</title>
+  <meta name="description" content="Custom residential landscape design by True North Property Services. We plan the full picture layout, plants, materials before any work begins. Get a free estimate today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="../index.html#services">Services ▾</a>
+                    <div class="nav-dropdown-menu">
+            <a href="landscaping.html">Landscaping Services</a>
+            <a href="property.html">Property Services</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="../about.html">About ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../about.html">About Us</a>
+            <a href="../locations.html">Locations</a>
+          </div>
+        </div>
+        <a href="../index.html#testimonials">Reviews</a>
+        <a href="#quote" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="mobile-services-label">Services</span>
+    <a href="landscaping.html">Landscaping Services</a>
+    <a href="property.html">Property Services</a>
+    <a href="../about.html">About Us</a>
+    <a href="../locations.html">Locations</a>
+    <a href="#quote" class="btn btn-primary">Get a Quote</a>
+  </div>
+</nav>
+
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-animate > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-animate > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-animate > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-animate > *:nth-child(4) { animation-delay: 0.55s; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class=hero-animate>
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#services">Services</a> / Landscape Design</div>
+      <h1>Landscape Design</h1>
+      <p>A clear plan for your yard before a single shovel hits the ground. We design landscapes that look great, stay within budget, and grow beautifully over time.</p>
+      <a href="#quote" class="btn btn-primary btn-lg">Get a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="service-content">
+      <div class="service-body">
+        <img src="../images/landscape-design-service.jpg" alt="Custom Residential Landscape Design" style="width:100%;height:340px;object-fit:cover;border-radius:10px;margin-bottom:1.75rem;display:block;" />
+        <h2>Landscape Design</h2>
+        <p>If you're not sure where to start or want everything to come together as a cohesive plan before any work begins, that's what we're here for. We walk your property with you, understand what you want, and build a plan that makes sense for your yard and your budget.</p>
+
+        <ul>
+          <li>On-site consultation and property walkthrough</li>
+          <li>Custom layout and planting plan</li>
+          <li>Plant and material recommendations for your space</li>
+          <li>All work installed by our own crew</li>
+        </ul>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-content"><h4>Initial Consultation</h4><p>We meet at your home, talk about your goals, and walk the property together.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-content"><h4>Develop the Plan</h4><p>We create a custom landscape design with layout, plant selections, and materials specified.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-content"><h4>Review &amp; Revise</h4><p>We present the plan and work with you until it's exactly what you want no pressure.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-content"><h4>Installation</h4><p>Our crew installs everything according to the approved design plan.</p></div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="sticky-form" id="quote">
+          <h3>Request a Design Consultation</h3>
+          <p class="form-sub">Tell us about your yard and goals we'll be in touch within 24 hours.</p>
+          <form class="quote-form" action="https://formspree.io/f/mqegokzl" method="POST">
+            <input type="hidden" name="service" value="Landscape Design" />
+            <input type="hidden" name="page" value="Design Service Page" />
+            <div class="form-group"><label for="d-name">Your Name *</label><input type="text" id="d-name" name="name" required placeholder="Jane Smith" /></div>
+            <div class="form-group"><label for="d-phone">Phone Number *</label><input type="tel" id="d-phone" name="phone" required placeholder="(555) 555-5555" /></div>
+            <div class="form-group"><label for="d-email">Email</label><input type="email" id="d-email" name="email" placeholder="jane@example.com" /></div>
+            <div class="form-group"><label for="d-city">Your City / Town *</label><input type="text" id="d-city" name="city" required placeholder="e.g. Maplewood" /></div>
+            <div class="form-group"><label for="d-message">Tell Us About Your Vision</label><textarea id="d-message" name="message" placeholder="What are you hoping to achieve? Front yard, back yard, both? Budget range?"></textarea></div>
+            <button type="submit" class="btn btn-primary btn-block">Request Consultation →</button>
+            <p class="form-disclaimer">No obligation. We'll respond same day.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Design Leads to Installation</h2>
+    <div class="related-services">
+      <a href="bed-installation.html" style="text-decoration:none;"><div class="service-card"><h3>Bed Installation</h3><p>New beds built from your design plan.</p></div></a>
+      <a href="planting.html" style="text-decoration:none;"><div class="service-card"><h3>Planting</h3><p>Plants selected and installed from your plan.</p></div></a>
+      <a href="mulch.html" style="text-decoration:none;"><div class="service-card"><h3>Mulch Installation</h3><p>Finished with the right ground cover.</p></div></a>
+      <a href="rock.html" style="text-decoration:none;"><div class="service-card"><h3>Rock &amp; Stone</h3><p>Rock features and accents from your design.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a><p>Professional Landscaping</p><p style="margin-top:1rem;"><strong style="color:#fff;">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.8)">(330) 284-7590</a></strong></p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="mulch.html">Mulch Installation</a></li><li><a href="edging.html">Edging</a></li><li><a href="bush-trimming.html">Bush Trimming</a></li><li><a href="rock.html">Rock &amp; Stone</a></li><li><a href="topsoil.html">Topsoil &amp; Seeding</a></li><li><a href="bed-installation.html">Bed Installation</a></li><li><a href="planting.html">Planting</a></li><li><a href="design.html">Landscape Design</a></li></ul></div>
+      <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="../locations/north-canton.html">North Canton</a></li><li><a href="../locations/jackson-township.html">Jackson Township</a></li><li><a href="../locations/green.html">Green</a></li><li><a href="../locations/cuyahoga-falls.html">Cuyahoga Falls</a></li><li><a href="../locations/stow.html">Stow</a></li><li><a href="../locations/uniontown.html">Uniontown</a></li><li><a href="../locations/hartville.html">Hartville</a></li><li><a href="../locations/plain-township.html">Plain Township</a></li><li><a href="../locations/canton.html">Canton</a></li><li><a href="../locations/tallmadge.html">Tallmadge</a></li></ul></div>
+      <div class="footer-col"><h4>Get In Touch</h4><div class="footer-contact-item">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.7)">(330) 284-7590</a></div><div class="footer-contact-item">📧 <a href="mailto:Truenorthps@outlook.com" style="color:rgba(255,255,255,0.7)">Truenorthps@outlook.com</a></div><a href="#quote" class="btn btn-primary" style="margin-top:1rem;">Get a Quote</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">&copy; 2026 True North Property Services. All rights reserved.</div></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

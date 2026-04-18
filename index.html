@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>True North Property Services | Landscaping | Stark &amp; Summit County, OH</title>
+  <meta name="description" content="True North Property Services residential landscaping in Stark and Summit County, Ohio. Mulch, edging, planting, rock, topsoil, and more. Get a free quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-animate > * {
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-animate > *:nth-child(2) { animation-delay: 0.25s; }
+    .hero-animate > *:nth-child(3) { animation-delay: 0.4s; }
+    .hero-animate > *:nth-child(4) { animation-delay: 0.55s; }
+    .hero-animate > *:nth-child(5) { animation-delay: 0.7s; }
+
+    /* ---- Hero slider ---- */
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease;
+      will-change: opacity;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .hero-slide.active { opacity: 1; }
+
+    /* Arrow buttons */
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+    .slider-arrow:hover { background: rgba(255,255,255,0.32); }
+    .slider-arrow.prev { left: 1.25rem; }
+    .slider-arrow.next { right: 1.25rem; }
+
+    /* Dot navigation */
+    .slider-dots {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      padding: 0;
+    }
+    .slider-dot.active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+
+    @media (max-width: 600px) {
+      .slider-arrow { width: 34px; height: 34px; font-size: 0.9rem; }
+    }
+
+    /* ---- Hero button override ---- */
+    .btn-hero {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border: 2px solid rgba(255,255,255,0.85);
+      border-radius: var(--radius);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      background: transparent;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-hero:hover {
+      background: var(--white);
+      color: var(--green-dark);
+      border-color: var(--white);
+    }
+
+    /* ---- Service cards ---- */
+    .service-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+    .service-big-card {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-big-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+      transform: translateY(-2px);
+    }
+    .service-big-card-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-big-card-body {
+      padding: 1.5rem 1.75rem 1.75rem;
+    }
+    .service-big-card-body h3 {
+      color: var(--green-dark);
+      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+    }
+    .service-big-card-body p {
+      font-size: 0.92rem;
+      margin-bottom: 1.1rem;
+    }
+    .service-big-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-tag {
+      background: var(--green-pale);
+      color: var(--green-dark);
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    /* ---- Why strip ---- */
+    .why-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .why-strip-item {
+      padding: 1.75rem 1.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .why-strip-item:last-child { border-right: none; }
+    .why-strip-item h4 {
+      font-size: 0.97rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-dark);
+    }
+    .why-strip-item p {
+      font-size: 0.87rem;
+      color: var(--text-mid);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .why-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green-mid);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ---- Centered quote form ---- */
+    .quote-center {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .quote-center h2 {
+      text-align: center;
+      margin-bottom: 0.4rem;
+      color: var(--text-dark);
+    }
+    .quote-center .sub {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+    }
+    .quote-center .quote-form-card {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    .quote-center .quote-form-card .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .quote-center .quote-form-card .form-footer .form-disclaimer {
+      margin: 0;
+      font-size: 0.78rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 900px) {
+      .service-two-col { grid-template-columns: 1fr; }
+      .why-strip { grid-template-columns: 1fr; }
+      .why-strip-item { border-right: none; border-bottom: 1px solid var(--border); }
+      .why-strip-item:last-child { border-bottom: none; }
+    }
+    @media (max-width: 600px) {
+      .service-big-card-image { height: 180px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LandscapingBusiness",
+    "name": "True North Property Services",
+    "description": "Residential landscaping and property services in Stark and Summit County, Ohio",
+    "telephone": "(330) 284-7590",
+    "email": "Truenorthps@outlook.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "North Canton", "addressRegion": "OH" },
+    "areaServed": ["North Canton","Jackson Township","Green","Cuyahoga Falls","Stow","Uniontown","Hartville","Plain Township","Canton","Tallmadge"],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/TrueNorth Logo.png" alt="True North Property Services" />
+      </a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="#services">Services ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="services/landscaping.html">Landscaping Services</a>
+            <a href="services/property.html">Property Services</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="about.html">About ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="locations.html">Locations</a>
+          </div>
+        </div>
+        <a href="#testimonials">Reviews</a>
+        <a href="#quote" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="mobile-services-label">Services</span>
+    <a href="services/landscaping.html">Landscaping Services</a>
+    <a href="services/property.html">Property Services</a>
+    <a href="about.html">About Us</a>
+    <a href="locations.html">Locations</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#quote" class="btn btn-primary">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero-photo" id="hero-slider">
+
+  <!-- Slides -->
+  <div class="hero-slide active" style="background-image: url('images/hero-1.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('images/hero-2.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('images/hero-3.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('images/hero-4.jpg');"></div>
+
+  <!-- Overlay -->
+  <div class="hero-photo-overlay"></div>
+
+  <!-- Arrow navigation -->
+  <button class="slider-arrow prev" id="slider-prev" aria-label="Previous">&#8592;</button>
+  <button class="slider-arrow next" id="slider-next" aria-label="Next">&#8594;</button>
+
+  <!-- Dot navigation -->
+  <div class="slider-dots" id="slider-dots">
+    <button class="slider-dot active" aria-label="Slide 1"></button>
+    <button class="slider-dot" aria-label="Slide 2"></button>
+    <button class="slider-dot" aria-label="Slide 3"></button>
+    <button class="slider-dot" aria-label="Slide 4"></button>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="hero-photo-content hero-animate">
+      <span class="hero-eyebrow">Serving Northeast Ohio</span>
+      <h1 style="font-size:clamp(1.6rem,3.5vw,2.5rem);">Quality Landscaping, Every Time.</h1>
+      <p>With 5+ years of hands-on experience, True North Property Services helps Northeast Ohio homeowners create and maintain outdoor spaces they're proud of.</p>
+      <a href="#quote" class="btn-hero">Get Your Quote Today</a>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Licensed &amp; insured
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Free on-site quotes
+        </div>
+        <div class="hero-trust-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          5+ years serving NE Ohio
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section-title">What We Do</h2>
+    <p class="section-subtitle" style="margin-bottom:2rem;">Landscaping and property care across Northeast Ohio.</p>
+
+    <div class="service-two-col">
+      <div class="service-big-card">
+        <img class="service-big-card-image" src="images/Landscaping.Home.jpeg" alt="Landscaping services in North Canton Ohio" />
+        <div class="service-big-card-body">
+          <h3>Landscaping Services</h3>
+          <p>From mulch and edging to full bed installs, planting, and design.</p>
+          <div class="service-big-card-tags">
+            <span class="service-tag">Mulch</span>
+            <span class="service-tag">Edging</span>
+            <span class="service-tag">Bush Trimming</span>
+            <span class="service-tag">Bed Installation</span>
+            <span class="service-tag">Planting</span>
+            <span class="service-tag">Rock &amp; Stone</span>
+            <span class="service-tag">Design</span>
+          </div>
+          <a href="services/landscaping.html" class="btn btn-green">View Services →</a>
+        </div>
+      </div>
+
+      <div class="service-big-card">
+        <img class="service-big-card-image" src="images/Property.home.jpeg" alt="Property services in Northeast Ohio" />
+        <div class="service-big-card-body">
+          <h3>Property Services</h3>
+          <p>Seasonal cleanup, yard maintenance, grading, and general property work.</p>
+          <div class="service-big-card-tags">
+            <span class="service-tag">Seasonal Cleanup</span>
+            <span class="service-tag">Yard Cleanup</span>
+            <span class="service-tag">Grading</span>
+            <span class="service-tag">Maintenance</span>
+          </div>
+          <a href="services/property.html" class="btn btn-green">View Services →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="why-strip">
+      <div class="why-strip-item">
+        <span class="why-label">Reliability</span>
+        <h4>We Show Up</h4>
+        <p>We confirm every job in advance and arrive when we say we will.</p>
+      </div>
+      <div class="why-strip-item">
+        <span class="why-label">Quality</span>
+        <h4>Attention to Detail</h4>
+        <p>Clean edges, consistent depth, complete cleanup every time.</p>
+      </div>
+      <div class="why-strip-item">
+        <span class="why-label">Communication</span>
+        <h4>Easy to Reach</h4>
+        <p>Call or text us directly. Fast, honest answers every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials" style="background:var(--bg-light);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <h2 class="section-title" style="margin:0;">What Customers Say</h2>
+      <a href="https://maps.app.goo.gl/oaNVJRj2YjggYAFs7" target="_blank" rel="noopener" class="btn btn-primary">Leave a Google Review</a>
+    </div>
+
+    <!-- Paste real reviews here as they come in -->
+    <div class="testimonials-grid">
+      <!-- Example format — uncomment and fill in when you have real reviews:
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Review text here."</p>
+        <div>
+          <div class="testimonial-author">Name</div>
+          <div class="testimonial-location">City, OH</div>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <p style="text-align:center;color:var(--text-light);font-size:0.85rem;margin-top:1.5rem;">Reviews from our Google Business page — more coming soon.</p>
+  </div>
+</section>
+
+<!-- ===== QUOTE ===== -->
+<section class="section" id="quote">
+  <div class="container">
+    <div class="quote-center">
+      <h2>Get a Free Quote</h2>
+      <p class="sub">We come out, take a look, and give you a clear written price. No pressure.</p>
+      <div class="quote-form-card">
+        <form class="quote-form" action="https://formspree.io/f/mqegokzl" method="POST">
+          <input type="hidden" name="page" value="Homepage" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-name">Name *</label>
+              <input type="text" id="q-name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="q-phone">Phone *</label>
+              <input type="tel" id="q-phone" name="phone" required placeholder="(330) 555-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q-city">Your Town *</label>
+            <input type="text" id="q-city" name="city" required placeholder="e.g. North Canton" />
+          </div>
+          <div class="form-group">
+            <label for="q-service">Service Type *</label>
+            <select id="q-service" name="service" required>
+              <option value="">  Select one  </option>
+              <option>Landscaping Services</option>
+              <option>Property Services</option>
+              <option>Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="q-message">Tell us what you need</label>
+            <textarea id="q-message" name="message" placeholder="Mulch, edging, bed install, cleanup whatever it is, describe it here."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Request →</button>
+          <div style="text-align:center;margin-top:1rem;">
+            <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:0.5rem;">Prefer to call or text?</p>
+            <a href="tel:3302847590" style="font-weight:600;color:var(--green-mid);font-size:0.95rem;">(330) 284-7590</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/TrueNorth Logo.png" alt="True North Property Services" />
+        </a>
+        <p>Residential landscaping serving Stark and Summit County, Ohio.</p>
+        <p style="margin-top:1rem;">
+          <strong style="color:#fff;">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.85)">(330) 284-7590</a></strong>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/landscaping.html">Landscaping Services</a></li>
+          <li><a href="services/property.html">Property Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="locations/north-canton.html">North Canton</a></li>
+          <li><a href="locations/jackson-township.html">Jackson Township</a></li>
+          <li><a href="locations/green.html">Green</a></li>
+          <li><a href="locations/cuyahoga-falls.html">Cuyahoga Falls</a></li>
+          <li><a href="locations/stow.html">Stow</a></li>
+          <li><a href="locations/uniontown.html">Uniontown</a></li>
+          <li><a href="locations/hartville.html">Hartville</a></li>
+          <li><a href="locations/plain-township.html">Plain Township</a></li>
+          <li><a href="locations/canton.html">Canton</a></li>
+          <li><a href="locations/tallmadge.html">Tallmadge</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="footer-contact-item">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.7)">(330) 284-7590</a></div>
+        <div class="footer-contact-item">📧 <a href="mailto:Truenorthps@outlook.com" style="color:rgba(255,255,255,0.7)">Truenorthps@outlook.com</a></div>
+        <div class="footer-contact-item">📍 Stark &amp; Summit County, Ohio</div>
+        <!-- Replace href with your Google Business profile URL -->
+        <a href="https://maps.app.goo.gl/oaNVJRj2YjggYAFs7" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;padding:0.5rem 1rem;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:6px;color:rgba(255,255,255,0.85);font-size:0.82rem;font-weight:600;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          View us on Google
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">&copy; 2026 True North Property Services. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  (function() {
+    const slides = document.querySelectorAll('#hero-slider .hero-slide');
+    const dots   = document.querySelectorAll('#slider-dots .slider-dot');
+    let current  = 0;
+    let timer;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 4000);
+    }
+
+    document.getElementById('slider-next').addEventListener('click', function() { next(); startTimer(); });
+    document.getElementById('slider-prev').addEventListener('click', function() { prev(); startTimer(); });
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { goTo(i); startTimer(); });
+    });
+
+    startTimer();
+  })();
+</script>
+</body>
+</html>

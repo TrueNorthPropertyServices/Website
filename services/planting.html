@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planting Services | True North Property Services | Free Estimate</title>
+  <meta name="description" content="Professional planting of trees, shrubs, perennials, and annuals by True North Property Services. We help you pick the right plants for your yard. Get a free estimate today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a>
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="../index.html#services">Services ▾</a>
+                    <div class="nav-dropdown-menu">
+            <a href="landscaping.html">Landscaping Services</a>
+            <a href="property.html">Property Services</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="../about.html">About ▾</a>
+          <div class="nav-dropdown-menu">
+            <a href="../about.html">About Us</a>
+            <a href="../locations.html">Locations</a>
+          </div>
+        </div>
+        <a href="../index.html#testimonials">Reviews</a>
+        <a href="#quote" class="btn btn-primary nav-cta">Get a Quote</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <span class="mobile-services-label">Services</span>
+    <a href="landscaping.html">Landscaping Services</a>
+    <a href="property.html">Property Services</a>
+    <a href="../about.html">About Us</a>
+    <a href="../locations.html">Locations</a>
+    <a href="#quote" class="btn btn-primary">Get a Quote</a>
+  </div>
+</nav>
+
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-animate > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-animate > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-animate > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-animate > *:nth-child(4) { animation-delay: 0.55s; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class=hero-animate>
+      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#services">Services</a> / Planting</div>
+      <h1>Planting Services</h1>
+      <p>Trees, shrubs, perennials, and annuals planted professionally for lasting color and beauty. We help you choose the right plants for your soil, sun, and style.</p>
+      <a href="#quote" class="btn btn-primary btn-lg">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="service-content">
+      <div class="service-body">
+        <img src="../images/planting-service.jpg" alt="Professional Plant Installation" style="width:100%;height:340px;object-fit:cover;border-radius:10px;margin-bottom:1.75rem;display:block;" />
+        <h2>Planting</h2>
+        <p>Getting the right plant in the right spot matters. We can help you pick plants suited to your yard's conditions, source them from local nurseries, and install everything properly so they actually thrive.</p>
+
+        <ul>
+          <li>Shrubs, perennials, ornamental trees, and annuals</li>
+          <li>Plant selection advice based on sun, soil, and space</li>
+          <li>Sourcing from local nurseries on your behalf</li>
+          <li>Mulch added around new plants to hold moisture</li>
+        </ul>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-content"><h4>Plant Selection</h4><p>We assess your beds, sun exposure, and soil then recommend plants that will succeed.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-content"><h4>Sourcing</h4><p>We source quality plants from reputable local nurseries or work with what you've purchased.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-content"><h4>Plant &amp; Space Properly</h4><p>Each plant goes in at the right depth and spacing with proper backfill and initial watering.</p></div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-content"><h4>Mulch &amp; Finish</h4><p>Mulch is added around new plants to retain moisture and give the bed a clean finished look.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="sticky-form" id="quote">
+          <h3>Get Your Free Planting Estimate</h3>
+          <p class="form-sub">Tell us what you're looking for and we'll respond within 24 hours.</p>
+          <form class="quote-form" action="https://formspree.io/f/mqegokzl" method="POST">
+            <input type="hidden" name="service" value="Planting" />
+            <input type="hidden" name="page" value="Planting Service Page" />
+            <div class="form-group"><label for="pl-name">Your Name *</label><input type="text" id="pl-name" name="name" required placeholder="Jane Smith" /></div>
+            <div class="form-group"><label for="pl-phone">Phone Number *</label><input type="tel" id="pl-phone" name="phone" required placeholder="(555) 555-5555" /></div>
+            <div class="form-group"><label for="pl-email">Email</label><input type="email" id="pl-email" name="email" placeholder="jane@example.com" /></div>
+            <div class="form-group"><label for="pl-city">Your City / Town *</label><input type="text" id="pl-city" name="city" required placeholder="e.g. Maplewood" /></div>
+            <div class="form-group"><label for="pl-message">Tell Us More</label><textarea id="pl-message" name="message" placeholder="What type of plants? Where in your yard? Any existing plants to work around?"></textarea></div>
+            <button type="submit" class="btn btn-primary btn-block">Request Free Quote →</button>
+            <p class="form-disclaimer">No obligation. We'll respond same day.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Complete the Look</h2>
+    <div class="related-services">
+      <a href="bed-installation.html" style="text-decoration:none;"><div class="service-card"><h3>Bed Installation</h3><p>Build the bed first, then we plant it.</p></div></a>
+      <a href="mulch.html" style="text-decoration:none;"><div class="service-card"><h3>Mulch Installation</h3><p>Mulch your new plants for best results.</p></div></a>
+      <a href="design.html" style="text-decoration:none;"><div class="service-card"><h3>Landscape Design</h3><p>Full design plan before any plants go in.</p></div></a>
+      <a href="bush-trimming.html" style="text-decoration:none;"><div class="service-card"><h3>Bush Trimming</h3><p>Keep your shrubs healthy and shapely.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="nav-logo"><img src="../images/TrueNorth Logo.png" alt="True North Property Services" /></a><p>Professional Landscaping</p><p style="margin-top:1rem;"><strong style="color:#fff;">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.8)">(330) 284-7590</a></strong></p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="mulch.html">Mulch Installation</a></li><li><a href="edging.html">Edging</a></li><li><a href="bush-trimming.html">Bush Trimming</a></li><li><a href="rock.html">Rock &amp; Stone</a></li><li><a href="topsoil.html">Topsoil &amp; Seeding</a></li><li><a href="bed-installation.html">Bed Installation</a></li><li><a href="planting.html">Planting</a></li><li><a href="design.html">Landscape Design</a></li></ul></div>
+      <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="../locations/north-canton.html">North Canton</a></li><li><a href="../locations/jackson-township.html">Jackson Township</a></li><li><a href="../locations/green.html">Green</a></li><li><a href="../locations/cuyahoga-falls.html">Cuyahoga Falls</a></li><li><a href="../locations/stow.html">Stow</a></li><li><a href="../locations/uniontown.html">Uniontown</a></li><li><a href="../locations/hartville.html">Hartville</a></li><li><a href="../locations/plain-township.html">Plain Township</a></li><li><a href="../locations/canton.html">Canton</a></li><li><a href="../locations/tallmadge.html">Tallmadge</a></li></ul></div>
+      <div class="footer-col"><h4>Get In Touch</h4><div class="footer-contact-item">📞 <a href="tel:3302847590" style="color:rgba(255,255,255,0.7)">(330) 284-7590</a></div><div class="footer-contact-item">📧 <a href="mailto:Truenorthps@outlook.com" style="color:rgba(255,255,255,0.7)">Truenorthps@outlook.com</a></div><a href="#quote" class="btn btn-primary" style="margin-top:1rem;">Get a Quote</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">&copy; 2026 True North Property Services. All rights reserved.</div></div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

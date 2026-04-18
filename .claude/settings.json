@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(cp \"/Users/lukeroach/Desktop/TrueNorth Services/Lexie_2818NorwoodFrontV1.png\" \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/property-front-1.png\")",
+      "Bash(cp \"/Users/lukeroach/Desktop/TrueNorth Services/Lexie_2818NorwoodFrontV2.png\" \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/property-front-2.png\")",
+      "Bash(cp \"/Users/lukeroach/Desktop/TrueNorth Services/Lexie_2818NorwoodFrontV3.png\" \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/property-front-3.png\")",
+      "Bash(cp \"/Users/lukeroach/Desktop/TrueNorth Services/Lexie_2818NorwoodBackV1.png\" \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/property-back-1.png\")",
+      "Bash(cp \"/Users/lukeroach/Desktop/TrueNorth Services/Lexie_2818NorwoodBackV2.png\" \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/property-back-2.png\")",
+      "Bash(open -a Photos)",
+      "Bash(mv \"031B247C-355E-47B2-84D5-6CE61D6C9304_1_105_c.jpeg\" \"landscaping-shrubs-walkway.jpg\")",
+      "Bash(mv \"6F989CB0-428C-45DE-ABB6-6D7552647D30_1_105_c.jpeg\" \"landscaping-front-beds-patio.jpg\")",
+      "Bash(mv \"1474425B-7263-4134-A8DE-2CF75D4F8FFF_1_105_c.jpeg\" \"landscaping-mulch-tree.jpg\")",
+      "Bash(mv \"0120A837-56D5-4FFA-A875-DBEEC8527C7B_1_105_c.jpeg\" \"landscaping-side-beds.jpg\")",
+      "Bash(mv \"2F71A595-8764-4AE2-A50F-C2DEB23F0A56_1_105_c.jpeg\" \"landscaping-side-beds-2.jpg\")",
+      "Bash(python3)",
+      "Bash(sips -s format jpeg \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/hero-2.heic\" --out \"/Users/lukeroach/Desktop/TrueNorth Services/Website/images/hero-2.jpg\")"
+    ]
+  }
+}
